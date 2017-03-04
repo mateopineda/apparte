@@ -1,0 +1,30 @@
+<ion-view view-title="Obras">
+  <ion-content has-subheader="false">
+	<div class="list card">
+
+  <div ng-repeat="res in result">
+	
+  <div class="item item-avatar">
+	<img src="http://lorempixel.com/400/200/">
+    <h2>{{res.name}}</h2>
+    <p>Diciembre 05, 2001</p>
+  	</div>
+
+ 	<div class="item item-body">
+  	<img class="full-image" ng-src="http://lorempixel.com/400/200/">
+  	<p>
+      This is a text. 
+    </p>
+  	</div>
+  	<div class="item tabs tabs-secondary tabs-icon-left">
+  	<a class="tab-item" href="#">
+    <p><b>Titulo: </b>{{res.name}}</p>
+    </a>
+    <a class="tab-item" href="#">
+    <p><b>Precio: </b>{{res.price}}</p>
+    </a>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>
+
