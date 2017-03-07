@@ -40,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: "obrasController"
       }
     }
+  })
+
+  .state('app.chat', {
+    url: '/chat',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/chat.html',
+        controller: "chatController"
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/obras');
