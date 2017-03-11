@@ -1,0 +1,21 @@
+<ion-view title="Galeria">
+    <ion-content overflow-scroll="true" padding="true" class="has-header" >
+        <div class="list" ng-repeat="user in galeria">
+            <div ui-sref="app.perfil" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg" >
+                    <!--h2>title</h2-->
+                    <img class="full-image" src="http://www.secretsex.com.br{{galeria[$index +1]}}">
+                </div>
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item stable-bg assertive">
+                        <i class="icon ion-heart"></i>
+                    </a>
+                    <a class="tab-item stable-bg positive-900">
+                        <i class="icon ion-chatbubbles"></i>
+                    </a>
+                </div>
+            </div>
+           
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,31 +1,31 @@
-<ion-view view-title="Obras">
-  <ion-content has-subheader="false">
-	<div class="list card">
-
-  <div ng-repeat="res in result">
-	
-  <div class="item item-avatar">
-	<img src="http://lorempixel.com/400/200/">
-    <h2>{{res.user.full_name}}</h2>
-    <p>Diciembre 05, 2001</p>
-  	</div>
-
- 	<div class="item item-body">
-    <img alt="chat" class="full-image" ng-src="http://lorempixel.com/400/200/"> 
-  	<p>
-    {{res.description}}
-    </p>
-  	</div>
-  	<div class="item tabs tabs-secondary tabs-icon-left">
-  	<a class="tab-item">
-    <p><b>Titulo: </b>{{res.name}}</p>
-    </a>
-    <a class="tab-item">
-    <p><b>Precio: </b>{{res.price}}</p>
-    </a>
-    <a href="#/app/chat" class="button">Negociar</a>  
-    </div>
-    </div>
-  </ion-content>
+<ion-view title="Obras ofertadas">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+    <ion-scroll zooming="true">
+        <div class="list card" ng-repeat="res in result">
+             <div class="item item-avatar">
+            <img src="http://lorempixel.com/400/200/">
+            <div class="item item-divider">{{res.user.full_name}}</div>
+            </div>
+            <div class="item item-body">
+                <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+                    <img class="full-image" src="http://lorempixel.com/400/200/">
+                    <div class="item item-divider">{{res.description}}</div>
+                    <div class="item item-divider">Titulo: {{res.name}}</div>
+                    <div class="item item-divider">Precio: {{res.price}}</div>
+                    </div>
+                <div class="button-bar">
+                    <a href="#/side-menu21/perfil/{{user.profile.user_id}}" id="acompanhantes-button9" class="button   button-block button-clear icon ion-happy-outline"></a>
+                    <button id="acompanhantes-button10" class="button  button-block button-clear icon ion-android-chat"></button>
+                    <a href="#/galeria/{{user.profile.user_id}}" id="acompanhantes-button11" class="button  button-block button-clear icon ion-images"></a>
+                </div>
+                
+            </div>
+        </div>
+        </ion-scroll>
+    </ion-content>
 </ion-view>
 
+
+
+    
+    

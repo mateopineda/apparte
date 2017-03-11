@@ -1,0 +1,35 @@
+<ion-view title="Perfil" ng-controller="acompanhantesCtrl">
+    <ion-content overflow-scroll="true" padding="true" class="has-header" >
+        <form class="list"></form>
+        <div class="mid-bar dark-bg z1 padding">
+            <h3>{{perfil.firstname}}</h3>
+            <p>R${{perfil.hour_price}}</p>
+        </div>        
+        <div class="content double-padding">
+            <p class="text-muted">{{perfil.about}}</p>
+        </div>
+         <ion-toggle toggle-class="toggle-assertive" name="favoritos">Favoritos</ion-toggle>
+        <ion-list>
+            <div class="item item-button-right">
+                Telefone: {{perfil.mobile}}
+                <button class="button button-positive">
+                  <i class="icon ion-ios-telephone"></i>
+                </button>
+            </div>            
+            <ion-item><span>Estado: </span>{{perfil.state_ss}}</ion-item>
+            <ion-item><span>Cidade: </span>{{perfil.city}}</ion-item>
+            <ion-item><span>Genero: </span>{{perfil.gender}}</ion-item>
+            <ion-item><span>Atendo: </span>{{perfil.who_meets}}</ion-item>
+            <ion-item><span>Onde atendo: </span>{{perfil.where_meets}}</ion-item>
+            <ion-item><span>Altura: </span>{{perfil.altura}}</ion-item>
+            <ion-item><span>Peso: </span>{{perfil.peso}}</ion-item>
+            <ion-item><span>Horario: </span>{{perfil.when_meets}}</ion-item>
+            <ion-item><span>1 hora: </span>{{perfil.hour_price}}</ion-item>
+            <ion-item><span>2 hora: </span>{{perfil.twohours_price}}</ion-item>
+            <ion-item><span>Pernoite: </span>{{perfil.overnight_price}}</ion-item>
+            <ion-item><span>Twitter: </span>{{perfil.url_twitter}}</ion-item> 
+            <ion-item><span>Facebook: </span>{{perfil.url_facebook}}</ion-item>            
+        </ion-list>
+
+    </ion-content>
+</ion-view>

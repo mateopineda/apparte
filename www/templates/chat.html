@@ -1,32 +1,3 @@
-<ion-view title="Negociando por: {{chats[0].artwork.name}}">
-  <ion-nav-buttons side="right">
-    <button class="button button-clear"><img class="header-picture" align="right" ng-src="http://lorempixel.com/400/200/" style="width: 17%; height: 17%"></button>
-  </ion-nav-buttons>
-  <div align="inputDown">
-  <img align="center" ng-src="../img/arte.jpg"  width=180% height=200%>
-  <ion-content class="chat" delegate-handle="chatScroll">
-    <div class="message-list">
-      <div ng-repeat="chat in chats" class="message-wrapper">
-        <div class="message">
-          <div class="message-text">{{chats[0].messages[0].body}}</div>
-          <span class="message-timestamp">{{chats[0].messages[0].created_at}}</span>
-        </div>
-      </div>
-    </div>
-  </ion-content>
-  </div>
-
-  <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
-    <label class="item-input-wrapper">
-      <input ng-model="chat.message"
-             dir="auto"
-             type="text"
-             on-return="chat.sendMessage(); chat.closeKeyboard()"
-             on-focus="chat.inputUp()"
-             on-blur="chat.inputDown()"/>
-    </label>
-    <span ng-if="chat.message.length > 0">
-      <button ng-click="chat.sendMessage()" class="button button-clear button-positive">Enviar</button>
-    </span>
-  </ion-footer-bar>
+<ion-view title="Chat">
+    <ion-content overflow-scroll="true" padding="true" class="has-header"></ion-content>
 </ion-view>
