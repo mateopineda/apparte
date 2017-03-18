@@ -6,14 +6,14 @@
     </div>
     <div class="list list-inset">
     <label class="item item-input">
-        <input placeholder="Usuario" highlight-color="balanced" type="text"></input>
+        <input placeholder="Usuario" highlight-color="balanced" type="text" ng-model="data.username"></input>
     </label>
     <label class="item item-input">
-        <input placeholder="Contraseña" highlight-color="energized" type="password"></input>
+        <input placeholder="Contraseña" highlight-color="energized" type="password" ng-model="data.password"></input>
     </label>
     </div>
     <div class="padding">
-        <button ui-sref="menu.obras" class="button button-full button-calm-900 ink">Login</button>
+        <button ui-sref="menu.obras" class="button button-full button-calm-900 ink" ng-click="login()">Login</button>
     </div>
     <div class="button-bar social-login">
         <button class="button button-small button-border icon-left ion-social-google button-assertive-900">Google+</button>
