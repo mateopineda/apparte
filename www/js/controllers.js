@@ -20,7 +20,7 @@ angular.module('app.controllers', [])
    
 .controller('galeriaCtrl', function($scope, $stateParams, $http) {
   $scope.galeria = [];
-   $http.get('http://www.secretsex.com.br/mobile/json/gallery?id=' + $stateParams.galeriaid).then(function(resp) {        
+   $http.get('https://vendelo-api.herokuapp.com/api/v1/gallery?id=' + $stateParams.galeriaid).then(function(resp) {        
         $scope.galeria = resp.data.gallery;
              
       }, function(err) {
@@ -54,7 +54,7 @@ angular.module('app.controllers', [])
    
 .controller('perfilCtrl', function($scope, $stateParams, $http) {
 	$scope.perfil = [];
-   $http.get('http://www.secretsex.com.br/mobile/json/user?id=' + $stateParams.perfilid).then(function(resp) {        
+   $http.get('https://vendelo-api.herokuapp.com/api/v1/user?id=' + $stateParams.perfilid).then(function(resp) {        
         $scope.perfil = resp.data.profile;       
       }, function(err) {
         console.error('ERR', err);
