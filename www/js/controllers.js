@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
 
-.controller('loginCtrl', function($scope, $http) {
+.controller('loginCtrl', function($scope, $http, $state) {
    $scope.data = {};
     $scope.login = function() {
       localStorage.clear();  
@@ -8,8 +8,10 @@ angular.module('app.controllers', [])
     {"auth":{"email":$scope.data.username,"password":$scope.data.password}}).then(function(resp) {       
         $scope.token = resp.data['jwt'];
         localStorage.setItem("token", $scope.token);
+        $state.go('menu.obras');
       }, function(err) {
         console.error('ERR', err);
+        $state.go('login');
         // err.status will contain the status code
       })
       }
