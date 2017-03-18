@@ -4,13 +4,14 @@ angular.module('app.controllers', [])
    $scope.data = {};
     $scope.login = function() {
       localStorage.clear();  
-      $http.post("http://vendelo-api.herokuapp.com/api/v1/login", 
+      $http.post("https://vendelo-api.herokuapp.com/api/v1/login", 
     {"auth":{"email":$scope.data.username,"password":$scope.data.password}}).then(function(resp) {       
         $scope.token = resp.data['jwt'];
         localStorage.setItem("token", $scope.token);
         $state.go('menu.obras');
       }, function(err) {
         console.error('ERR', err);
+        $scope.data.username="Errada";
         $state.go('login');
         // err.status will contain the status code
       })
