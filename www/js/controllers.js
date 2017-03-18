@@ -1,9 +1,9 @@
 angular.module('app.controllers', [])
 
 .controller('loginCtrl', function($scope, $http) {
-  localStorage.clear();
    $scope.data = {};
     $scope.login = function() {
+      localStorage.clear();  
       $http.post("http://vendelo-api.herokuapp.com/api/v1/login", 
     {"auth":{"email":$scope.data.username,"password":$scope.data.password}}).then(function(resp) {       
         $scope.token = resp.data['jwt'];
@@ -41,7 +41,6 @@ angular.module('app.controllers', [])
       $scope.result = data; // for UI
     })
     .error(function(data, status, headers,config){
-      localStorage.clear();
       console.log('data error');
     })
     .then(function(result){
