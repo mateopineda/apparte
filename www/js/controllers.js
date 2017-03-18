@@ -11,7 +11,7 @@ angular.module('app.controllers', [])
         $state.go('menu.obras');
       }, function(err) {
         console.error('ERR', err);
-        $scope.data.username="Errada";
+        document.getElementById('fallo').innerHTML = 'Intente de nuevo, las credenciales fallaron';
         $state.go('login');
         // err.status will contain the status code
       })
