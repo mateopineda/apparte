@@ -1,7 +1,7 @@
 <ion-view title="Obras ofertadas">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <div class="list card" ng-repeat="res in result">
-             <div class="item item-avatar">
+            <div class="item item-avatar">
             <img src="https://lorempixel.com/400/200/">
             <div class="item item-divider">{{res.user.full_name}}</div>
             </div>
@@ -14,7 +14,7 @@
                     </div>
                 <div class="button-bar">
                     <a href="#/side-menu21/perfil/{{user.profile.user_id}}" class="button   button-block button-clear icon ion-happy-outline"></a>
-                    <button ui-sref="menu.chat" class="button  button-block button-clear icon ion-android-chat"></button>
+                    <a href="#/chat" class="button button-block button-clear icon ion-android-chat"></a>
                     <a href="#/galeria/{{user.profile.user_id}}" class="button  button-block button-clear icon ion-images"></a>
                 </div>
                 

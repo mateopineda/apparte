@@ -67,6 +67,10 @@ angular.module('app.controllers', [])
 
 })
    
+.controller('chatsCtrl', function($scope) {
+
+})
+
 .controller('informacionCtrl', function($scope) {
 
 })

@@ -10,7 +10,7 @@ angular.module('app.routes', [])
     
   
 
-      .state('login', {
+  .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
     controller: 'loginCtrl'
@@ -53,16 +53,22 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.chat', {
-    url: '/chat',
+  .state('menu.chats', {
+    url: '/chats',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/chat.html',
-        controller: 'chatCtrl'
+        templateUrl: 'templates/chats.html',
+        controller: 'chatsCtrl'
       }
     }
   })
 
+
+  .state('chat', {
+    url: '/chat',
+    templateUrl: 'templates/chat.html',    
+    controller: 'chatCtrl'
+  })
 
   .state('menu.informacion', {
     url: '/informacion',
