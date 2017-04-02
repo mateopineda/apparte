@@ -1,25 +1,17 @@
 <ion-view title="Buscar">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
-            <ion-toggle toggle-class="toggle-positive">Toggle</ion-toggle>
-            <ion-radio>Pintura</ion-radio>
-            <ion-radio>Escultura</ion-radio>
-            <ion-item class="range range-positive">Precio
-                <input type="range" value="50" min="0" max="9999">
+            <ion-item class="range range-positive">Precio máximo
+                <input type="range" value="0" min="0" max="10000000" ng-change="rangoPrecio(this.value)" ng-model="value" style="">
             </ion-item>
-            <label class="item item-select">
-                <span class="input-label">Pais</span>
-                <select></select>
-            </label>
-            <label class="item item-select">
-                <span class="input-label">Ciudad</span>
-                <select></select>
-            </label>
+            <div style="text-align: center">
+            <label id="valor" style="color:grey; font-size: 15px;">$ 0</label>
+            </div>
             <label class="item item-input">
                 <span class="input-label">Nombre</span>
-                <input type="text" placeholder="">
+                <input type="text" style="border-bottom: 1px solid grey;" placeholder="">
             </label>
-            <button id="filtro-button14" class="button button-calm button-block button-outline">Buscar</button>
+            <button id="filtro-button14" style="color:grey;" class="button button-calm button-block button-outline">Buscar</button>
         </form>
     </ion-content>
 </ion-view>

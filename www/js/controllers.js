@@ -31,7 +31,9 @@ angular.module('app.controllers', [])
 })
    
 .controller('filtroCtrl', function($scope) {
-
+$scope.rangoPrecio = function (val){
+  document.getElementById('valor').innerHTML="$ "+ val;
+}
 })
    
 .controller('obrasCtrl', function($scope, $http) {
@@ -62,9 +64,42 @@ angular.module('app.controllers', [])
       })
 
 })
-   
-.controller('chatCtrl', function($scope) {
 
+.controller('chatCtrl', function($scope, $http) {
+$scope.chat = {};
+$scope.cargarMensajes = function() {
+$scope.result = "";
+  $http.get('https://vendelo-api.herokuapp.com/api/v1/talks/1', {
+    headers: {'Authorization':'Bearer ' + localStorage.getItem("token")}
+}).success(function(data, status, headers,config){
+      console.log('data success');
+      console.log(data); // for browser console
+      document.getElementById('obra').innerHTML = 'Negociando por: ' + data.artwork.name;
+      if (data.status=="open") {
+        document.getElementById("estado").style.backgroundImage = "url('img/chat1.jpg')";
+      }
+      else {document.getElementById("estado").style.backgroundImage = "url('img/chat2.jpg')";}
+      $scope.result = data; // for UI
+    })
+    .error(function(data, status, headers,config){
+      console.log('data error');
+    })
+    .then(function(result){
+      things = result.data;
+    });
+  }
+  $scope.cargarMensajes();
+  $scope.enviarMensaje = function() {  
+    $http.post("https://vendelo-api.herokuapp.com/api/v1/talks/1/messages", 
+    {'body': $scope.chat.message} ,
+    {headers: {'Authorization':'Bearer ' + localStorage.getItem("token")}}).then(function(resp) { 
+    console.log("data success");
+    document.getElementById('mensaje').value = "";        
+    }, function(err) {
+      console.error('ERR', err);
+      // err.status will contain the status code
+    })
+    }
 })
    
 .controller('chatsCtrl', function($scope) {

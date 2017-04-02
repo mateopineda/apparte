@@ -64,10 +64,14 @@ angular.module('app.routes', [])
   })
 
 
-  .state('chat', {
+  .state('menu.chat', {
     url: '/chat',
+    views: {
+      'side-menu21': {
     templateUrl: 'templates/chat.html',    
     controller: 'chatCtrl'
+      }
+    }
   })
 
   .state('menu.informacion', {
