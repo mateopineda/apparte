@@ -84,15 +84,6 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.salir', {
-    url: '/salir',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/salir.html',
-        controller: 'salirCtrl'
-      }
-    }
-  })
 
   .state('menu', {
     url: '/side-menu21',

@@ -17,7 +17,7 @@ angular.module('app.controllers', [])
       })
       }
 })
-   
+  
 .controller('galeriaCtrl', function($scope, $stateParams, $http) {
   $scope.galeria = [];
    $http.get('https://vendelo-api.herokuapp.com/api/v1/gallery?id=' + $stateParams.galeriaid).then(function(resp) {        
@@ -110,7 +110,4 @@ $scope.result = "";
 
 })
    
-.controller('salirCtrl', function($scope) {
-
-})
     
