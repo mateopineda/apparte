@@ -5,7 +5,7 @@ angular.module('app.controllers', [])
     $scope.login = function() {
       localStorage.clear();  
       $http.post("https://vendelo-api.herokuapp.com/api/v1/login", 
-    {"auth":{"email":$scope.data.username,"password":$scope.data.password}}).then(function(resp) {       
+    {"auth":{"email":$scope.data.username,"password":$scope.data.password}}).then(function(resp) {
         $scope.token = resp.data['jwt'];
         localStorage.setItem("token", $scope.token);
         $state.go('menu.obras');
@@ -78,7 +78,9 @@ $scope.result = "";
       if (data.status=="open") {
         document.getElementById("estado").style.backgroundImage = "url('img/chat1.jpg')";
       }
-      else {document.getElementById("estado").style.backgroundImage = "url('img/chat2.jpg')";}
+      else {
+        document.getElementById("estado").style.backgroundImage = "url('img/chat2.jpg')";
+      }
       $scope.result = data; // for UI
     })
     .error(function(data, status, headers,config){

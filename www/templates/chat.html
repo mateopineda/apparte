@@ -4,6 +4,14 @@
     <div class="item-avatar"><img class="header-picture" ng-src="https://lorempixel.com/400/200/" style="margin-top: -13px"></div>
   </ion-nav-buttons>
 <ion-content id="estado" style="background-size: cover;">
+<div class="list card" ng-repeat="res in result.messages.slice().reverse()">
+            <div class="item item-body">
+                <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+                    <div class="item item-divider">{{res.body}}</div>
+                </div>
+            </div>
+  </div>
+</ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
     <button class="button button-clear button-icon button-positive icon ion-ios-upload-outline"></button>
 
@@ -25,8 +33,11 @@
       <button class="button button-clear button-icon button-positive icon ion-ios-camera-outline"></button>
       <i class="buttons-seperator icon ion-android-more-vertical"></i>
       <button class="button button-clear button-icon button-positive icon ion-ios-mic-outline"></button>
-    </span>
+    </span>    
   </ion-footer-bar>
 
-</ion-view>
+
+
+
+
 
