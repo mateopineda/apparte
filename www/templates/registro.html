@@ -1,0 +1,30 @@
+<ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+    <div class="hero no-header flat">
+        <div class="content">
+            <div class="app-icon"></div>
+        </div>
+    </div>
+    <div class="list list-inset">
+    <label class="item item-input">
+        <input placeholder="Nombre" highlight-color="balanced" type="text" ng-model="data.full_name"></input>
+    </label>
+    <label class="item item-input">
+        <input placeholder="Email" highlight-color="balanced" type="text" ng-model="data.email"></input>
+    </label>
+    <label class="item item-input">
+        <input placeholder="Contraseña" highlight-color="energized" type="password" ng-model="data.password"></input>
+    </label>
+    <form action="">
+    <label class="item item-input">Selecciona un rol</label>
+    <div align="center" class="content">
+      <input type="radio" id="role" name="rol" checked="checked" value="artist"> Artista</input>
+      <input type="radio" id="role" name="rol" value="client"> Cliente</input>
+    </div>    
+    </form>
+    </div>
+    <div class="padding">
+        <button class="button button-full button-calm-900 ink" ng-click="registro()">Registrarse</button>
+        <label id="resultado" style="color:red; font-size: 20px"></label>
+    </div>
+</ion-content>
+

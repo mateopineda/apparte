@@ -16,6 +16,12 @@ angular.module('app.routes', [])
     controller: 'loginCtrl'
   })
 
+  .state('registro', {
+    url: '/registro',
+    templateUrl: 'templates/registro.html',
+    controller: 'registroCtrl'
+  })
+
   .state('galeria', {
     url: '/galeria/:galeriaid',
     templateUrl: 'templates/galeria.html',    
@@ -88,6 +94,7 @@ angular.module('app.routes', [])
   .state('menu', {
     url: '/side-menu21',
     templateUrl: 'templates/menu.html',
+    controller: 'menuCtrl',
     abstract:true
   })
 
