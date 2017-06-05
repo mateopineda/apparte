@@ -1,0 +1,21 @@
+<ion-view title="Crear">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+    <div class="list list-inset">
+    <label class="item item-input">
+        <input placeholder="Nombre: " highlight-color="balanced" type="text" ng-model="data.name"></input>
+    </label>
+    <label class="item item-input">
+        <input placeholder="Descripcion: " highlight-color="balanced" type="text" ng-model="data.description"></input>
+    </label>
+    <label class="item item-input">
+        <input placeholder="Precio: $" highlight-color="balanced" type="number" ng-model="data.price"></input>
+    </label>
+    </div>
+    <div class="padding">
+        <button class="button button-full button-calm-900 ink" ng-click="registrar()">Crear</button>
+        <label id="malo" style="color:red; font-size: 20px"></label>
+    </div>
+    </ion-content>
+</ion-view>
+
+    

@@ -1,0 +1,16 @@
+<ion-view title="Chats">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-avatar">
+            <img src="https://lorempixel.com/400/200/">
+            <div class="item item-divider">Obra: {{result.artwork.name}}</div>
+            </div>
+            <div class="item item-body">
+                <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
+                    <div class="item item-divider">Ultimo mensaje: {{result.messages[0].body}}</div>
+                    <div class="item item-divider">Estado : {{result.status}}</div>
+                    </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -48,6 +48,15 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.crearobra', {
+  url: '/crear',
+  views: {
+    'side-menu21': {
+      templateUrl: 'templates/crear.html',
+      controller: 'crearCtrl'
+    }
+  }
+})
 
   .state('menu.perfil', {
     url: '/perfil/:perfilid',
@@ -59,12 +68,12 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.chats', {
-    url: '/chats',
+  .state('menu.mensajes', {
+    url: '/mensajes',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/chats.html',
-        controller: 'chatsCtrl'
+        templateUrl: 'templates/mensajes.html',
+        controller: 'mensajesCtrl'
       }
     }
   })
